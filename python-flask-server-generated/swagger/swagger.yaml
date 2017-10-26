@@ -1,0 +1,107 @@
+---
+swagger: "2.0"
+info:
+  description: "This is a simple API to Meraki Users"
+  version: "1.0.0"
+  title: "Simple Users API"
+  contact:
+    email: "abdellbar@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "virtserver.swaggerhub.com"
+basePath: "/GVE/MerakiUsers/1.0.0"
+tags:
+- name: "developers"
+  description: "Operations available to regular developers"
+schemes:
+- "https"
+paths:
+  /users:
+    post:
+      tags:
+      - "developers"
+      summary: "List Users"
+      description: "Get the list of all users in your meraki network"
+      operationId: "controllers.admins_controller.search_user"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "network"
+        description: "shearch users"
+        required: false
+        schema:
+          $ref: "#/definitions/network"
+      responses:
+        200:
+          description: "search results matching criteria"
+          schema:
+            $ref: "#/definitions/all_users"
+        400:
+          description: "invalid input, object invalid"
+        409:
+          description: "an existing item already exists"
+      x-tags:
+      - tag: "admins"
+definitions:
+  network:
+    type: "object"
+    required:
+    - "csrf_token"
+    - "my_cookie"
+    - "url_base"
+    properties:
+      csrf_token:
+        type: "string"
+        example: "uqbdjhbqoisdqkbd+lsjdh/sqj="
+      my_cookie:
+        type: "string"
+        example: "jqhdkqdkqjjhdkqhkjqhkdjqshkjqhsdkjqh"
+      url_base:
+        type: "string"
+        example: "https://n150.meraki.com/Home-Paris/n/QtIyfbwc/"
+  all_users:
+    type: "object"
+    properties:
+      all_users:
+        type: "array"
+        items:
+          $ref: "#/definitions/User"
+  User:
+    type: "object"
+    required:
+    - "authed_networks"
+    - "created_at"
+    - "dup_type"
+    - "email"
+    - "meraki_radius"
+    - "name"
+    - "secret"
+    properties:
+      secret:
+        type: "string"
+        example: "bsAn2dwc"
+      name:
+        type: "string"
+        example: "Widget Adapter"
+      email:
+        type: "string"
+        format: "email"
+        example: "test@test.com"
+      dup_type:
+        type: "boolean"
+        example: true
+      created_at:
+        type: "string"
+        example: "1506795774"
+      authed_networks:
+        type: "array"
+        items:
+          type: "string"
+          example: "QtIyfbwc"
+      meraki_radius:
+        type: "boolean"
+        example: true
