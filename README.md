@@ -5,13 +5,13 @@ I worote this code to get access to the users interface in meraki dashbord in an
 
 I worot a medium about it check it out [here!](https://medium.com/@aglagane/hacking-meraki-api-d0f5cd75612f)
 
-#Install
+# Install
 for this project you will need the folwing python lebraries :
 ```
 $ pip install requests,browsercookie,json
 ```
 
-#Usage 
+# Usage 
 
 Donwload the code 
 ```
@@ -22,7 +22,7 @@ Make sure to login to your dahsbord on the same computer you are dowloading the 
 ![alt tag](images/dashbord_url.png)
 
 make note of your meraki dahsbord API genraly it will look somthing like this (copy only blue part)
-`<span style="color:blue">https://n000.meraki.com/Home-Paris/n/XXXXXX/</span>manage/configure/guests`
+<p><span style="color:blue">https://n000.meraki.com/Home-Paris/n/XXXXXX/</span>manage/configure/guests<p>
 
 Run the [get_envirenement.py](get_envirenement.py) file, it will create a [meraki_env.json](meraki_env.json) file. 
 note : depending on your OS you my need some access rights when runing this code, on mac you will get a reqest to allow the process to access your chrome
@@ -44,16 +44,18 @@ Once the file is created and it has the data, you can go ahead and run the swagg
 
 you can use Postman to test the swagger server and get access to your netwrk users, import the postman collection file [Meraki_users.postman_collection.json](Meraki_users.postman_collection.json) into your postman, copy the content of meraki_env.json and past it as json boday for your post reqest
 
-#contacts:
+# Contacts:
 
 CISCO GVE 
 Abdellbar@gmail.com
 
-#Contrebutions:
+# Contrebutions:
 Conterbutions welcomed, please feel free to pull the repo.
 
-#Licence:
-Please see LICENSE. 24 February 2017
+# Licence:
+Please see [LICENSE](LICENSE).
+
+24 February 2017
 
 
 
