@@ -22,7 +22,7 @@ Make sure to login to your dahsbord on the same computer you are dowloading the 
 ![alt tag](images/dashbord_url.png)
 
 make note of your meraki dahsbord API genraly it will look somthing like this (copy only blue part)
-*https://n000.meraki.com/Home-Paris/n/XXXXXX/*manage/configure/guests
+`*https://n000.meraki.com/Home-Paris/n/XXXXXX/*manage/configure/guests`
 
 Run the [get_envirenement.py](get_envirenement.py) file, it will create a [meraki_env.json](meraki_env.json) file. 
 note : depending on your OS you my need some access rights when runing this code, on mac you will get a reqest to allow the process to access your chrome
