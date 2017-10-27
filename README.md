@@ -21,7 +21,7 @@ $ git clone https://github.com/Abdellbar/Meraki_users_API.git
 Make sure to login to your dahsbord on the same computer you are dowloading the code to, using only *google chrome* fro now.
 ![alt tag](images/dashbord_url.png)
 
-make note of your meraki dahsbord API genraly it will look somthing like this (copy only blue part)
+make note of your meraki dahsbord API genraly it will look somthing like this (copy only  part between *)
 `*https://n000.meraki.com/Home-Paris/n/XXXXXX/*manage/configure/guests`
 
 Run the [get_envirenement.py](get_envirenement.py) file, it will create a [meraki_env.json](meraki_env.json) file. 
