@@ -1,0 +1,35 @@
+{
+	"id": "460a7c05-dcfd-04d0-72fa-9d1539d69534",
+	"name": "Meraki users",
+	"description": "",
+	"order": [
+		"ba3489e5-95da-05ed-78d0-033d068d59fc"
+	],
+	"folders": [],
+	"timestamp": 1509106297984,
+	"owner": "1128334",
+	"public": false,
+	"published": false,
+	"requests": [
+		{
+			"id": "ba3489e5-95da-05ed-78d0-033d068d59fc",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://localhost:8080//GVE/MerakiUsers/1.0.0/users",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1509106333382,
+			"name": "Get users",
+			"description": "this reqest will get you the list of users in your network",
+			"collectionId": "460a7c05-dcfd-04d0-72fa-9d1539d69534",
+			"responses": [],
+			"rawModeData": "past the content of your meraki_env.json file here"
+		}
+	]
+}
